@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import CommentApp from './Comment';
+import {Container, Row, Col, Button} from 'react-bootstrap';
 
 function Square(props) {
     return (
@@ -23,24 +24,32 @@ function Square(props) {
   
     render() {
       return (
-        <div>
-          <div className="board-row">
-            {this.renderSquare(0)}
-            {this.renderSquare(1)}
-            {this.renderSquare(2)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(3)}
-            {this.renderSquare(4)}
-            {this.renderSquare(5)}
-          </div>
-          <div className="board-row">
-            {this.renderSquare(6)}
-            {this.renderSquare(7)}
-            {this.renderSquare(8)}
-          </div>
-          <CommentApp />
-        </div>
+        <Container>
+          <Row className='w-100'>
+            <Col>
+              <div className="board-row">
+                  {this.renderSquare(0)}
+                  {this.renderSquare(1)}
+                  {this.renderSquare(2)}
+                </div>
+                <div className="board-row">
+                  {this.renderSquare(3)}
+                  {this.renderSquare(4)}
+                  {this.renderSquare(5)}
+                </div>
+                <div className="board-row">
+                  {this.renderSquare(6)}
+                  {this.renderSquare(7)}
+                  {this.renderSquare(8)}
+                </div>
+            </Col>
+            <Col>
+              <div style={{paddingTop: '100px'}}>
+                <CommentApp />
+              </div>
+            </Col>
+          </Row>
+        </Container>
       );
     }
   }

@@ -1,4 +1,5 @@
 import React from 'react';
+import {Button, Col} from 'react-bootstrap';
 
 
 class CommentApp extends React.Component {
@@ -10,20 +11,21 @@ class CommentApp extends React.Component {
     }
     render() {
         return (
+            <Col>
             <div>
-                <h3>Comment</h3>
+                <h2>CommentList</h2>
                 <CommentList items={this.state.items}/>
                 <form onSubmit={this.handleSubmit}>
                     <input
                         id = "new-todo"
                         onChange={this.handleChange}
                         value={this.state.text.date}
+                        style={{height: '3vh'}}
                     />
-                    <button type="submit">
-                        コメントする
-                    </button>
+                    <Button variant="primary" type='submit' style={{height: '4vh'}}>Comment</Button>
                 </form>
             </div>
+            </Col>
         );
     }
 
