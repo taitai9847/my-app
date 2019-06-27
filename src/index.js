@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-
+import CommentApp from './Comment';
 
 function Square(props) {
     return (
@@ -39,6 +39,7 @@ function Square(props) {
             {this.renderSquare(7)}
             {this.renderSquare(8)}
           </div>
+          <CommentApp />
         </div>
       );
     }
